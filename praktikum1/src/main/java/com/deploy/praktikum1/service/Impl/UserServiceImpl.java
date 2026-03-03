@@ -1,17 +1,18 @@
-package com.deploy.praktikum1.services.Impl;
+package com.deploy.praktikum1.service.Impl;
 
 import com.deploy.praktikum1.mapper.UserMapper;
+
 import com.deploy.praktikum1.model.dto.UserAddRequest;
 import com.deploy.praktikum1.model.dto.UserDto;
 import com.deploy.praktikum1.model.entity.User;
 import com.deploy.praktikum1.repository.UserRepository;
-import com.deploy.praktikum1.services.UserService;
+import com.deploy.praktikum1.service.UserService;
 import com.deploy.praktikum1.util.ValidationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -76,7 +77,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void DeleteUser(String id) {
+    public void deleteUser(String id) {
         User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("user not found"));
         userRepository.delete(user);
     }

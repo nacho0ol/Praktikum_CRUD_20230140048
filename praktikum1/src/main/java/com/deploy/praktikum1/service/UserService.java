@@ -1,4 +1,4 @@
-package com.deploy.praktikum1.services;
+package com.deploy.praktikum1.service;
 
 import com.deploy.praktikum1.model.dto.UserAddRequest;
 import com.deploy.praktikum1.model.dto.UserDto;

@@ -2,7 +2,7 @@ package com.deploy.praktikum1.controller;
 
 import com.deploy.praktikum1.model.dto.UserAddRequest;
 import com.deploy.praktikum1.model.dto.UserDto;
-import com.deploy.praktikum1.services.UserService;
+import com.deploy.praktikum1.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -80,7 +80,7 @@ public class UserController {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity<Map<String, Object>> DeleteUser(@PathVariable("id") String id) {
-        userService.DeleteUser(id);
+        userService.deleteUser(id);
 
         return ResponseEntity.status(HttpStatus.OK).body(Map.of(
                 "status", "success delete user with id " + id
