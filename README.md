@@ -25,12 +25,14 @@ Menambahkan data user baru ke dalam database. ID akan di-*generate* secara otoma
     * Accept: application/json
 
 Request Body
+```json
 {
     "name": "Nachma Olivia",
     "age": 19
 }
-
+```
 Hasil Sukses
+```json
 {
     "status": "success",
     "data": {
@@ -39,7 +41,7 @@ Hasil Sukses
         "age": 19
     }
 }
-
+```
 ## 2. Get Data
 Mendapatkan daftar seluruh user yang ada di dalam database.
 
@@ -51,6 +53,7 @@ Mendapatkan daftar seluruh user yang ada di dalam database.
     * Accept: application/json
 
 Hasil Sukses
+```json
 {
     "status": "success",
     "data": [
@@ -66,6 +69,7 @@ Hasil Sukses
         }
     ]
 }
+```
 
 ## 3.Update Data
 Memperbarui nama dan/atau umur dari user yang sudah ada di database berdasarkan ID.
@@ -80,12 +84,15 @@ Memperbarui nama dan/atau umur dari user yang sudah ada di database berdasarkan 
 * Path : ID (UUID) dari user yang ingin diperbarui.
 
 Request Body
+```json
 {
     "name": "Supri (Update)",
     "age": 19
 }
+```
 
 Hasil Sukses
+```json
 {
     "status": "success",
     "data": {
@@ -94,6 +101,7 @@ Hasil Sukses
         "age": 19
     }
 }
+```
 
 ## 4. Delete Data
 Menghapus data user dari database berdasarkan ID.
@@ -108,6 +116,8 @@ Menghapus data user dari database berdasarkan ID.
 * Path: ID (UUID) dari user yang ingin dihapus.
 
 Hasil Jadi
+```json
 {
     "status": "success delete user with id 07805318-1c6c-42fe-aa2d-d05a54ad43f4"
 }
+```
