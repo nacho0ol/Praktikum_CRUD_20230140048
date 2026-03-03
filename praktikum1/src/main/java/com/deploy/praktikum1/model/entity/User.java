@@ -18,5 +18,5 @@ public class User {
     private String name;
 
     @Column(name = "age", nullable = false)
-    private String email;
+    private String age;
 }

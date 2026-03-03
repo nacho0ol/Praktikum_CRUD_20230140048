@@ -3,11 +3,12 @@ package com.deploy.praktikum1.mapper;
 import com.deploy.praktikum1.model.dto.UserDto;
 import com.deploy.praktikum1.model.entity.User;
 import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
 
-    UserDto toDto(User user);
+    UserMapper MAPPER = Mappers.getMapper(UserMapper.class);
 
-    User toEntity(UserDto userDto);
+    UserDto toUserDtoData(User user);
 }
